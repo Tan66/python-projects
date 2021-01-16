@@ -1,5 +1,9 @@
 from tkinter import *
 from tkinter.scrolledtext import ScrolledText
+import logging
+
+logging.basicConfig(level=logging.INFO,
+                    filename='./python-projects/texteditor.log')
 
 
 def load():
@@ -13,13 +17,15 @@ def save():
         file.write(contents.get('1.0', END))
 
 
+logging.info('Instantiate tkinter')
 top = Tk()
 top.title('Text Editor')
 
-
+logging.info('Add content scrolled text box')
 contents = ScrolledText()
 contents.pack(side=BOTTOM, expand=True, fill=BOTH)
 
+logging.info('Add input box for filename')
 # input filename
 filename = Entry()
 filename.pack(side=LEFT, expand=True, fill=X)
