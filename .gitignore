@@ -1,3 +1,6 @@
 /Text Editor with Tkinter/test
 /Text Editor with Tkinter/dist
 texteditor.log
+
+/text_parser/__pycache__
+/text_parser/test_output.html
